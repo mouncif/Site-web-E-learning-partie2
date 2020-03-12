@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.4.95/css/materialdesignicons.css">
+<app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+    <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+        <div class="row" style="padding-top: 30px;">
+            <div class="col-md-2 d-none d-sm-block">
+                <svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                        <path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z" id="Polygon-2" stroke="#EF4A5B" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                        <path d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z" id="Polygon-3" stroke="#795D9C" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                        <path d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z" id="Polygon-4" stroke="#F2773F" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                        <path d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z" id="Polygon-5" stroke="#36B455" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                    </g>
+                </svg>
+            </div> 
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="cover-image">
+                                <img src="https://pixabay.com/get/52e8dd474d56ac14f6d1867dda6d49214b6ac3e456597549752f7ed192/planner-4884740_1920.jpg" class="img img-fluid">
+                            </div>
+                            <div class="user-image">
+                                <img src="{{currentUserOnline.photo}}" class="img ">
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-name">{{ currentUserOnline.nom }}</div>
+                            <div class="profile-name">{{currentUserOnline.prenom}}</div>
+                            <p class="profile-description">{{ currentUserOnline.type }}</p>
+                            <p class="profile-description">{{ currentUserOnline.email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 grid-margin stretch-card">
+                <div class="card">
+                        <div class="card-body">
+                            <p class="card-title font-weight-bold">A propos</p>
+                            <hr>
+                            <p class="card-description">Information d'Admin</p>
+                            <ul class="about">
+                                <li class="about-items"><i class="mdi mdi-account icon-sm "></i>
+                                <span class="about-item-name">Nom:</span><span class="about-item-detail"><input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.nom }}"></span>
+                                <li class="about-items"><i class="mdi mdi-mail-ru icon-sm "></i>
+                                <span class="about-item-name">Prenom:</span><span class="about-item-detail"><input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.prenom }}" disabled></span>
+                            </ul>
+
+
+                            <p class="card-description">Contact Information</p>
+                            <ul class="about">
+                                <li class="about-items">
+                                    <i class="mdi mdi-phone icon-sm "></i>
+                                    <span class="about-item-name">Profile:</span>
+                                    <span class="about-item-detail">
+                                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.type }}" disabled>
+                                    </span>
+                                <li class="about-items"><i class="mdi mdi-map-marker icon-sm "></i><span class="about-item-name">Address:</span><span class="about-item-detail"><input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.email }}"></span> 
+                                <li class="about-items"><i class="mdi mdi-email-outline icon-sm "></i><span class="about-item-name">Email:</span><span class="about-item-detail"><input class="form-control" id="name" type="email" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.adresse }}" disabled></span> 
+                            </ul>
+                            <p class="card-description">Password</p>
+                            <ul class="about">
+                                <li class="about-items"><i class="mdi mdi-email-outline icon-sm "></i><span class="about-item-name">Mote de pass:</span><span class="about-item-detail">*****************</span>
+                                    <br><br><br><br>
+                                    <button type="button" class="btn btn-success  btn-block" data-toggle="modal" data-target="#myModal" >
+                                        Edit
+                                    </button> 
+                            </ul>
+                            <div class="modal fade" id="myModal" role="dialog" style="margin-top: 100px;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" style="text-align:center">Modifier les informations </h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form action="/action_page.php">
+                                            <div class="row">
+                                                  <div class="col-md-6">
+                                                    <div class="form-group">
+                                                      <input type="email" class="form-control" value="{{ currentUserOnline.nom }}" id="email">
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <div class="form-group">
+                                                      <input type="password" class="form-control" value="{{ currentUserOnline.prenom }}" id="pwd">
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <input type="email" class="form-control" value="{{ currentUserOnline.email }}" id="email" disabled>
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <input type="text" class="form-control" value="{{ currentUserOnline.type }}" id="pwd" disabled>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <input type="text" class="form-control" value="{{ currentUserOnline.adresse }}" id="email">
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <input type="text" class="form-control" value="{{ currentUserOnline.photo }}" id="pwd">
+                                                  </div>
+                                                </div>
+                                          </div>
+                                          </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#" class="btn btn-info">Modifier</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+

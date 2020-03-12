@@ -1,0 +1,73 @@
+{
+  "formation": [
+    {
+      "titre": "formation 2",
+      "description": "description 2",
+      "contenu": "ddd",
+      "nomF": "formateur3",
+      "duree": "duree 2",
+      "formateur": "dd",
+      "id": 3
+    },
+    {
+      "titre": "formation 3",
+      "description": "description 3",
+      "contenu": "ddd",
+      "nomF": "formateur3",
+      "duree": "duree 3",
+      "formateur": "dd",
+      "id": 2
+    },
+    {
+      "titre": "formation 4",
+      "description": "description 4",
+      "contenu": "ddd",
+      "nomF": "formateur4",
+      "duree": "duree 4",
+      "formateur": "dd",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "nom": "EL ALAMI",
+      "prenom": "FATIMA ZAHRA",
+      "email": "elalamifatimazahra3@gmail.com",
+      "type": "Admin",
+      "photo": "https://pixabay.com/get/52e1d24b4952ae14f6d1867dda6d49214b6ac3e45659724071297bd094/art-4178302_1920.jpg",
+      "password": "123456",
+      "adresse": "fes-taza",
+      "id": 1
+    },
+    {
+      "nom": "alami",
+      "prenom": "malak",
+      "email": "malak@gmail",
+      "type": "Client",
+      "photo": "https://pixabay.com/get/54e2d54a4b56ab14f6d1867dda6d49214b6ac3e45659724071287fd296/girl-2209147_1920.jpg",
+      "password": "123456",
+      "adresse": "fes",
+      "id": 2
+    },
+    {
+      "nom": "Alami",
+      "prenom": "Ayoub",
+      "email": "ayoub.alami@gmail.com",
+      "type": "Client",
+      "photo": "https://pixabay.com/get/53e1d0464b5ab108feda8460825668204022dfe05b52784d7d2973d7/man-515518_1920.jpg",
+      "password": "123456",
+      "adresse": "fes",
+      "id": 4
+    }
+  ],
+  "admin": {
+    "id": 1,
+    "nom": "El Alami Fatima Zahra",
+    "userName": "AlamiAdmin",
+    "bio": "bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla ",
+    "phone": "+212 672-211961",
+    "Adresse": "Taza Maroc",
+    "Email": "elalalmifatimazahra3@gmail.com",
+    "password": "123456@"
+  }
+}

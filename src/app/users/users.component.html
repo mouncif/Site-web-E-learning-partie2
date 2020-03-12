@@ -1,0 +1,81 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+   <div class="row" style="padding-top: 40px;">
+        <div class="col-md-2 d-none d-sm-block">
+          <svg width="380px" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z" id="Polygon-1" stroke="#007FB2" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                <path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z" id="Polygon-2" stroke="#EF4A5B" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                <path d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z" id="Polygon-3" stroke="#795D9C" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                <path d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z" id="Polygon-4" stroke="#F2773F" stroke-width="6" sketch:type="MSShapeGroup"></path>
+                <path d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z" id="Polygon-5" stroke="#36B455" stroke-width="6" sketch:type="MSShapeGroup"></path>
+            </g>
+        </svg>
+        </div>
+        <div class="col-md-10">
+          <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title"><a  style="margin-bottom: 10px;" class="btn btn-primary btn-fw" href="utilisateur/ajout">Ajouter un utilisateur</a></h4>
+                <p class="card-description">  </p>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th> User </th>
+                      <th> Name </th>
+                      <th> Email </th>
+                      <th> Type </th>
+                      <th> Adresse </th>
+                      <th colspan="2"> Action </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = "let user of  users">
+                      <td ><img src="{{ user.photo }}" alt="image" style="width: 30px;height: auto;" /></td>
+                      <td> {{ user.nom }} {{ user.prenom }}</td>
+                      <td>{{user.email}}</td>
+                      <td> {{user.type}} </td>
+                      <td> {{user.adresse}} </td>
+                      <td><button type='button' class="btn btn-dark btn-fw" data-toggle="modal" attr.data-target="#myModal{{user.id}}" >Edit</button></td>
+                      <td><button (click)="deleteCour(user.id)" class="btn btn-danger btn-fw" >Del</button></td>
+                      <div class="modal fade" id="myModal{{user.id}}" role="dialog" style="margin-top: 100px;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" style="text-align:center">Modifier les informations </h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form action="/action_page.php">
+                                    <div class="row">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="email" class="form-control" value="{{user.nom}}" id="email">
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <input type="password" class="form-control" placeholder="{{user.prenom}}" id="pwd">
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-info">Modifier</a>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+   </div>
+        
+</div>
+
