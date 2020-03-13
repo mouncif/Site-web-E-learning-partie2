@@ -29,7 +29,7 @@
                         <div class="profile-content">
                             <div class="profile-name">{{ currentUserOnline.nom }}</div>
                             <div class="profile-name">{{currentUserOnline.prenom}}</div>
-                            <p class="profile-description">{{ currentUserOnline.type }}</p>
+                            <p class="profile-description">{{ currentUserOnline.profile }}</p>
                             <p class="profile-description">{{ currentUserOnline.email }}</p>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                         <div class="card-body">
                             <p class="card-title font-weight-bold">A propos</p>
                             <hr>
-                            <p class="card-description">Information d'Admin</p>
+                            <p class="card-description">Information </p>
                             <ul class="about">
                                 <li class="about-items"><i class="mdi mdi-account icon-sm "></i>
                                 <span class="about-item-name">Nom:</span><span class="about-item-detail"><input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.nom }}"></span>
@@ -55,7 +55,7 @@
                                     <i class="mdi mdi-phone icon-sm "></i>
                                     <span class="about-item-name">Profile:</span>
                                     <span class="about-item-detail">
-                                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.type }}" disabled>
+                                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.profile}}" disabled>
                                     </span>
                                 <li class="about-items"><i class="mdi mdi-map-marker icon-sm "></i><span class="about-item-name">Address:</span><span class="about-item-detail"><input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.email }}"></span> 
                                 <li class="about-items"><i class="mdi mdi-email-outline icon-sm "></i><span class="about-item-name">Email:</span><span class="about-item-detail"><input class="form-control" id="name" type="email" name="name" required data-error="Please enter your name" value="{{ currentUserOnline.adresse }}" disabled></span> 
@@ -85,7 +85,7 @@
                                                   </div>
                                                   <div class="col-md-6">
                                                     <div class="form-group">
-                                                      <input type="password" class="form-control" value="{{ currentUserOnline.prenom }}" id="pwd">
+                                                      <input type="text" class="form-control" value="{{ currentUserOnline.prenom }}" id="pwd">
                                                     </div>
                                                   </div>
                                             </div>
@@ -97,7 +97,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                   <div class="form-group">
-                                                    <input type="text" class="form-control" value="{{ currentUserOnline.type }}" id="pwd" disabled>
+                                                    <input type="text" class="form-control" value="{{ currentUserOnline.profile }}" id="pwd" disabled>
                                                   </div>
                                                 </div>
                                             </div>
@@ -112,7 +112,14 @@
                                                     <input type="text" class="form-control" value="{{ currentUserOnline.photo }}" id="pwd">
                                                   </div>
                                                 </div>
-                                          </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                  <div class="form-group">
+                                                    <input type="password" class="form-control" value="{{ currentUserOnline.password }}" id="pwd">
+                                                  </div>
+                                                </div>
+                                            </div>
                                           </form>
                                         </div>
                                         <div class="modal-footer">
